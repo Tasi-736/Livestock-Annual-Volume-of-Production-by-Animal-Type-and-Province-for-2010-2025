@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livestock Production Analytics</title>
+<style>
+  :root {
+    --bg: #EEF2EA; --ink: #1D2B22; --muted: #4F6156; --card: #FFFFFF;
+    --green: #2F5D3A; --blue: #2B5F8A; --line: #CBD5C6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14201A; --ink: #E7EFE6; --muted: #A9B9AD; --card: #1C2B23; --green: #7FB88D; --blue: #8DB8DE; --line: #33473B; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 48px 20px 64px; }
+  h1 { font: 700 clamp(2rem, 5vw, 3.2rem)/1.1 Georgia, "Times New Roman", serif; margin: 0 0 16px; }
+  h2 { font: 700 1.5rem/1.2 Georgia, serif; margin: 48px 0 12px; }
+  p { max-width: 68ch; color: var(--muted); }
+  .btn { display: inline-block; background: var(--green); color: var(--bg); padding: 12px 22px; border-radius: 6px; font-weight: 600; text-decoration: none; }
+  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+  ul.feat { padding-left: 20px; max-width: 68ch; }
+  ul.feat li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); }
+  th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; }
+  .scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
+  iframe { width: 100%; height: 760px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); }
+  footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Livestock Production Analytics and Classification, 2010-2025</h1>
+  <p>This project studies the annual volume of livestock production (carabao, cattle, goat, and hog) by province in the Philippines from 2010 to 2025. It shows the trends, compares animal types, and tests four machine learning models that classify a province’s production as high or low, then predicts the 2026 category.</p>
+  <p><a class="btn" href="https://YOUR-APP-NAME.streamlit.app" target="_blank" rel="noopener">Open the live app</a></p>
+
+  <h2>What the app does</h2>
+  <ul class="feat">
+    <li>Data visualization: trends, scatterplot, and correlation heatmap</li>
+    <li>Descriptive analytics with bar charts, pie charts, and a boxplot</li>
+    <li>Four classification models: Logistic Regression, Decision Tree, Random Forest, and Gradient Boosting</li>
+    <li>If a model scores below 80% on validation, synthetic training records are tested and kept only when they help</li>
+    <li>ROC curves and confusion matrices for every model</li>
+    <li>A comparison table of accuracy, precision, recall, F1-score, and ROC-AUC</li>
+    <li>High or low production predictions for 2026</li>
+  </ul>
+
+  <h2>Model results</h2>
+  <p>Copy these numbers from the comparison table in your Colab notebook or the live app (replace each dash).</p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Model</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1-score</th><th>ROC-AUC</th></tr></thead>
+      <tbody>
+        <tr><td>Logistic Regression</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td>Decision Tree</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td>Random Forest</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td>Gradient Boosting</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Try it here</h2>
+  <iframe src="https://YOUR-APP-NAME.streamlit.app/?embed=true" title="Livestock analytics app" loading="lazy"></iframe>
+
+  <footer>Made by YOUR NAME for YOUR SUBJECT. Data: Philippine Statistics Authority, annual volume of production by animal type and province, 2010-2025.</footer>
+</main>
+</body>
+</html>
